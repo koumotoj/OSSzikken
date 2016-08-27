@@ -14,5 +14,5 @@ CREATE TABLE event(
 	event_name TEXT NOT NULL,
 	memo TEXT,
 	candidate_schedule TEXT NOT NULL,
-	registeration_date DATE NOT NULL
+	registration_date DATE NOT NULL
 );
