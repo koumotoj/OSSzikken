@@ -7,7 +7,7 @@ class Event{
 	private $candidateSchedule;
 	private $registrationDate;
 
-	public function __construnt($eventUrl, $eventName, $memo, $candidateSchedule, $registrationDate){
+	public function __construct($eventUrl, $eventName, $memo, $candidateSchedule, $registrationDate){
 		$this -> eventUrl = $eventUrl;
 		$this -> eventName = $eventName;
 		$this -> memo = $memo;
