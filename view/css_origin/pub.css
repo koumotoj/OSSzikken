@@ -1,0 +1,24 @@
+.box1{
+	padding-top: 10px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	text-align:center;
+	background-color:lightgreen;
+	border-color:#11111F;
+	border-width:2px;
+	border-style:solid;
+	height:100px;
+	width:500px;
+	/* display:block; */
+}
+
+.box_center{
+	border: 1px;
+	width: 400px;
+	margin:0 auto 0 auto;
+	text-align: center;
+}
+
+.p_center{
+	text-align: center;
+}
