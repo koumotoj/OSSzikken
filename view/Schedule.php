@@ -92,10 +92,9 @@ comment:
 	 
    </table>
   </div>
-
- <form>
-	  <input type="button" name="haribote2" value="イベント新規作成" />
- </form>
+  <form>
+   <input type="button" name="haribote2" value="スケジュール追加" />
+  </form>
  <br>
 </div>		
 </body>
