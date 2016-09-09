@@ -36,10 +36,6 @@ bootstarpについているシステム
    <h1>調整くん</h1>
   </div>
   
-  <div align="right">
-   <input type="button" name="admin" value="管理者ページへ" />
-  </div>
-  
   <form>
    <div class="row">
     <div class="col-md-4 hidden-xs">
@@ -52,7 +48,7 @@ bootstarpについているシステム
 
    <div class="col-md-6 hidden-xs">
     <p>日程：</p>
-    <textarea name="event" cols=30 rows=6></textarea>
+    <textarea name="date" cols=30 rows=6></textarea>
    </div>
 
   </div>
@@ -60,8 +56,8 @@ bootstarpについているシステム
  <!-- 2列目のグリッド-->
   <div class="row">
    <div class="col-md-4 hidden-xs">
-    <p>コメント：</p>
-    <textarea name="event" cols=30 rows=5></textarea>
+    <p>メモ：</p>
+    <textarea name="memo" cols=30 rows=5></textarea>
    </div>
   
    <div class="col-md-1 hidden-xs">
