@@ -73,7 +73,7 @@ bootstarpについているシステム
   <div class="row">
    <div class="col-md-4 hidden-xs">
 	<br>
-    <p>日程：</p>
+    <p>コメント：</p>
     <textarea name="date" cols=30 rows=6></textarea>
    </div>
  
@@ -81,7 +81,6 @@ bootstarpについているシステム
     <br> <br> <br> <br> <br> <br> 
     <input type="button" name="haribote" value="イベント新規作成" />
    </div>
-  
   </div>
  </form>
  <br>

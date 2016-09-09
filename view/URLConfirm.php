@@ -29,7 +29,9 @@ comment:
   </div>
   
   <div class="box_center">
-   ここにはURLが表示される予定です。
+   <?php
+	$_
+   ?>
   </div> 
  <form>
 	  <input type="button" name="haribote2" value="スケジュール表示" />

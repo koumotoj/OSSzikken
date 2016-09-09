@@ -36,24 +36,25 @@ bootstarpについているシステム
    <h1>調整くん</h1>
   </div>
   
-  <form>
+  <form action="../controller_viewtest/MainPageController.php" method="post">
    <div class="row">
     <div class="col-md-4 hidden-xs">
     <p>イベント名：</p>
-    <textarea name="event" cols=30 rows=1></textarea>
+    <textarea name="event_name" cols=30 rows=1></textarea>
    </div>
 
    <div class="col-md-1 hidden-xs">
    </div>
 
    <div class="col-md-6 hidden-xs">
+	<!-- 今は1つだけしか入れられない -->
     <p>日程：</p>
-    <textarea name="date" cols=30 rows=6></textarea>
+    <textarea name="candidate_schedule" cols=30 rows=6></textarea>
    </div>
 
   </div>
 
- <!-- 2列目のグリッド-->
+ <!-- 2列目のグリッド -->
   <div class="row">
    <div class="col-md-4 hidden-xs">
     <p>メモ：</p>
@@ -65,7 +66,7 @@ bootstarpについているシステム
  
    <div class="col-md-4 hidden-xs" style="position: relative;">
     <br> <br> <br> <br> <br> <br> 
-    <input type="button" name="haribote" value="イベント新規作成" />
+    <input type="submit" name="haribote" value="イベント新規作成" />
    </div>
   
   </div>
