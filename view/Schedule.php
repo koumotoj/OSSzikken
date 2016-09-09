@@ -25,12 +25,76 @@ comment:
  </div>
  
   <div class="p_center">
-   今からテーブルを作るぞ！
+   <table border=1>
+    <tr>
+		<th><!-- ここは空白 --></th>
+		<!-- 名前はデータベースから取り出す -->
+		<th>
+			Aさん
+		</th>
+		<th>
+			Bさん
+		</th>
+		<th>
+			Cさん
+		</th>
+		<!-- ここまで -->
+	</tr>
+	
+	<!-- 日程1表示部分 -->
+	<tr>
+		<th>
+			日程1
+		</th>
+		<th>
+			Aさんの評価
+		</th>
+		
+		<th>
+			Bさんの評価
+		</th>
+		<th>
+			Cさんの評価
+		</th>
+	</tr>
+	
+	<!-- 日程2表示部分 -->
+	<tr>
+		<th>
+			日程2
+		</th>
+		<th>
+			Aさんの
+		</th>
+		<th>
+			Bさんの
+		</th>
+		<th>
+			Cさんの
+		</th>
+	</tr>
+	
+	<!-- コメント欄 -->
+	<tr>
+		<th>
+			コメント
+		</th>
+		<th>
+			Aさんのコメント
+		</th>
+		<th>
+			Bさんのコメント
+		</th>
+		<th>
+			Cさんのコメント
+		</th>
+	</tr>
+	 
+   </table>
   </div>
-
- <form>
-	  <input type="button" name="haribote2" value="イベント新規作成" />
- </form>
+  <form>
+   <input type="button" name="haribote2" value="スケジュール追加" />
+  </form>
  <br>
 </div>		
 </body>
