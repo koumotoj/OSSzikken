@@ -4,6 +4,9 @@ date：2016/08/31
 comment:
 
 -->
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
@@ -29,12 +32,17 @@ comment:
   </div>
   
   <div class="box_center">
-   <?php
-	$_
-   ?>
+  <?php
+	//if( ($test = $_SESSION['test']) == null) {
+	//	echo "<p>エラー！</p>";
+	//} else {
+		$test = $_SESSION['test'];
+		echo $test;
+	//}
+  ?>
   </div> 
- <form>
-	  <input type="button" name="haribote2" value="スケジュール表示" />
+<form action="../controller_viewtest/ScheduleController.php" method="post">
+	  <input type="submit" name="haribote2" value="スケジュール表示" />
  </form>
  <br>
 </div>		

@@ -4,6 +4,9 @@ date：2016/08/31
 comment:
 
 -->
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
@@ -23,7 +26,11 @@ comment:
  <div class="box1">
   <h1>調整くん</h1>
  </div>
- 
+ <h1>イベントの名前が入る</h1>
+ <?php
+	$event = $_SESSION['event'];
+	echo "<h1>$event</h1>";
+ ?>
   <div class="p_center">
    <table border=1>
     <tr>
@@ -44,7 +51,10 @@ comment:
 	<!-- 日程1表示部分 -->
 	<tr>
 		<th>
-			日程1
+			<?php
+				$schedule = $_SESSION['schedule'];
+				echo $schedule;
+			?>
 		</th>
 		<th>
 			Aさんの評価
@@ -92,7 +102,7 @@ comment:
 	 
    </table>
   </div>
-  <form>
+  <form action="../controller_viewtest/.php" method="post">
    <input type="button" name="haribote2" value="スケジュール追加" />
   </form>
  <br>
