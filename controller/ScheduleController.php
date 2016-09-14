@@ -1,10 +1,12 @@
 <?php
-require_once'../model/EventDAO.php';
-require_once'../model/Event.php';
-require_once'../model/ScheduleDAO.php';
-require_once'../model/Schedule.php';
+require_once'/var/www/html/OSSzikken/model/EventDAO.php';
+require_once'/var/www/html/OSSzikken/model/Event.php';
+require_once'/var/www/html/OSSzikken/model/ScheduleDAO.php';
+require_once'/var/www/html/OSSzikken/model/Schedule.php';
 
-$hash = $_GET['hash'];
+//$hash = $_GET['hash'];
+session_start();
+$hash = $_SESSION['url'];
 $eventDao = new EventDAO();
 $event =$eventDao -> getEvent($hash);
 
