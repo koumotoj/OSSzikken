@@ -1,6 +1,6 @@
 <?php
-require_once '../model/UrlCreator.php';
-require_once '../model/EventDAO.php';
+require_once '/var/www/html/OSSzikken/model/UrlCreator.php';
+require_once '/var/www/html/OSSzikken/model/EventDAO.php';
 
 $eventName = $_POST['event_name'];
 $memo = $_POST['memo'];
@@ -9,7 +9,9 @@ $date = new DateTime();
 $now = $date -> format("Y-m-d");
 
 $hash = UrlCreator::createUrl($eventName);
-$_POST['hash'] = $hash;
+session_start();
+$SESSION['url'] = $hash;
+//$_POST['hash'] = $hash;
 $eventDao = new EventDAO();
 $eventDao -> setEvent($hash, $eventName, $memo, $candidateSchedule, $now);
 
