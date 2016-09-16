@@ -4,7 +4,9 @@ require_once 'Schedule.php';
 class ScheduleDAO{
 	public function setSchedule($eventUrl, $candidateSchedule, $displayName, $evaluation){
 		$db = new PDO("mysql:host=localhost;dbname=choseikun", "root", "kickic");
-     		$sql = "INSERT INTO schedule (event_url, candidate_schedule, display_name, evaluation) VALUES (:event_url, :candidate_schedule, :display_name, :evaluation);";
+     		
+		//$db = new PDO("mysql:host=localhost;dbname=choseikun", "root", "");
+		$sql = "INSERT INTO schedule (event_url, candidate_schedule, display_name, evaluation) VALUES (:event_url, :candidate_schedule, :display_name, :evaluation);";
 		$ps = $db ->prepare($sql);
 		$ps -> bindParam(":event_url", $eventUrl);
 		$ps -> bindParam(":candidate_schedule", $candidateSchedule);

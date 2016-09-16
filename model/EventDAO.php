@@ -4,6 +4,8 @@ class EventDAO{
 	public function setEvent($eventUrl, $eventName, $memo, $candidateSchedule, $registrationDate){
 		try{
 		$db = new PDO("mysql:host=localhost;dbname=choseikun", "root", "kickic");
+		
+		//$db = new PDO("mysql:host=localhost;dbname=choseikun", "root", "");
 		$sql = "INSERT INTO event (event_url, event_name, memo, candidate_schedule, registration_date) VALUES (:event_url, :event_name, :memo, :candidate_schedule, :registration_date);";
 		$ps = $db ->prepare($sql);
 		$ps -> bindParam(":event_url", $eventUrl);
