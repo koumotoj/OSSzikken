@@ -10,7 +10,7 @@ $now = $date -> format("Y-m-d");
 
 $hash = UrlCreator::createUrl($eventName);
 session_start();
-$SESSION['url'] = $hash;
+$_SESSION['url'] = $hash;
 //$_POST['hash'] = $hash;
 $eventDao = new EventDAO();
 $eventDao -> setEvent($hash, $eventName, $memo, $candidateSchedule, $now);

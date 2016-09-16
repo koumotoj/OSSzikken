@@ -36,7 +36,7 @@ comment:
 	//if( ($test = $_SESSION['test']) == null) {
 	//	echo "<p>エラー！</p>";
 	//} else {
-		$test = $_SESSION['test'];
+		$test = $_SESSION['url'];
 		echo $test;
 	//}
   ?>

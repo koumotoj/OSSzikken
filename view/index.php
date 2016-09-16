@@ -36,7 +36,7 @@ bootstarpについているシステム
    <h1>調整くん</h1>
   </div>
   
-  <form action="../controller_viewtest/MainPageController.php" method="post">
+  <form action="../controller/MainPageController.php" method="post">
    <div class="row">
     <div class="col-md-4 hidden-xs">
     <p>イベント名：</p>

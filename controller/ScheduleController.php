@@ -8,13 +8,15 @@ require_once'/var/www/html/OSSzikken/model/Schedule.php';
 session_start();
 $hash = $_SESSION['url'];
 $eventDao = new EventDAO();
-$event =$eventDao -> getEvent($hash);
+$event = $eventDao -> getEvent($hash);
 
 $scheduleDao = new ScheduleDAO();
-$schedule =$scheduleDao -> getSchedule($hash);
+$schedulelist = $scheduleDao -> getSchedule($hash);
 
-$_POST['event'] = $event;
-$_POST['schedule'] = $schedule;
+$_SESSION['event']=$scheduleArray;
+
+//$_POST['event'] = $event;
+//$_POST['schedule'] = $schedule;
 
 header('Location: ../view/Schedule.php');
 exit();
