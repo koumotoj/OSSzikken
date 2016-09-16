@@ -37,7 +37,14 @@ comment:
 		<th><!-- ここは空白 --></th>
 		<!-- 名前はデータベースから取り出す -->
 		<th>
-			Aさん
+			<?php
+				$dis_name = $_SESSION['display_name'];
+				if( $dis_name != null ){
+					echo "$dis_name";
+				} else {
+					echo "Aちゃん（nullエラー）";
+				}
+			?>
 		</th>
 		<th>
 			Bさん
@@ -53,11 +60,21 @@ comment:
 		<th>
 			<?php
 				$schedule = $_SESSION['schedule'];
-				echo $schedule;
+				echo "$schedule";
+				$_SESSION['schedule1'] = $schedule; 
 			?>
 		</th>
 		<th>
-			Aさんの評価
+			<?php
+				$evalution = $_SESSION['evaluation'];
+				if( $evalution != null ){
+					if( $evalution == 0 ) echo "○";
+					if( $evalution == 1 ) echo "△";
+					if( $evalution == 2 ) echo "×";
+				} else {
+					echo "Aちゃんの評価（エラー）";
+				}
+			?>
 		</th>
 		
 		<th>
@@ -90,7 +107,14 @@ comment:
 			コメント
 		</th>
 		<th>
-			Aさんのコメント
+			<?php
+				$comment = $_SESSION['comment'];
+				if( $comment != null ){
+					echo "$comment";
+				} else {
+					echo "Aちゃんの評価（エラー）";
+				}
+			?>
 		</th>
 		<th>
 			Bさんのコメント
@@ -102,8 +126,9 @@ comment:
 	 
    </table>
   </div>
-  <form action="../controller_viewtest/.php" method="post">
-   <input type="button" name="haribote2" value="スケジュール追加" />
+  <!-- <form action="../controller_viewtest/.php" method="post"> -->
+  <form action="Scheduleadd.php" method="post">
+   <input type="submit" name="haribote2" value="スケジュール追加" />
   </form>
  <br>
 </div>		
