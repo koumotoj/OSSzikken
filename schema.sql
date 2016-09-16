@@ -6,7 +6,8 @@ CREATE TABLE schedule(
 	event_url VARCHAR(128) NOT NULL,
 	candidate_schedule TEXT ,
 	display_name TEXT,
-	evaluation INTEGER NOT NULL
+	evaluation INTEGER NOT NULL,
+	comment TEXT
 );
 
 CREATE TABLE event(
