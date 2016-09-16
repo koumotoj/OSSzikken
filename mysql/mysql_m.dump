@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.6.32, for Linux (x86_64)
 --
--- Host: localhost    Database: mysql
+-- Host: localhost    Database: 
 -- ------------------------------------------------------
 -- Server version	5.6.32
 
@@ -14,6 +14,75 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `choseikun`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `choseikun` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `choseikun`;
+
+--
+-- Table structure for table `event`
+--
+
+DROP TABLE IF EXISTS `event`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `event` (
+  `event_url` varchar(128) NOT NULL,
+  `event_name` text NOT NULL,
+  `memo` text,
+  `candidate_schedule` text NOT NULL,
+  `registration_date` date NOT NULL,
+  PRIMARY KEY (`event_url`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `event`
+--
+
+LOCK TABLES `event` WRITE;
+/*!40000 ALTER TABLE `event` DISABLE KEYS */;
+/*!40000 ALTER TABLE `event` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `schedule`
+--
+
+DROP TABLE IF EXISTS `schedule`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `schedule` (
+  `schedule_id` int(11) NOT NULL AUTO_INCREMENT,
+  `event_url` varchar(128) NOT NULL,
+  `candidate_schedule` text,
+  `display_name` text,
+  `evaluation` int(11) NOT NULL,
+  `comment` text,
+  PRIMARY KEY (`schedule_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `schedule`
+--
+
+LOCK TABLES `schedule` WRITE;
+/*!40000 ALTER TABLE `schedule` DISABLE KEYS */;
+/*!40000 ALTER TABLE `schedule` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Current Database: `mysql`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `mysql` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `mysql`;
 
 --
 -- Table structure for table `columns_priv`
@@ -870,4 +939,4 @@ CREATE TABLE IF NOT EXISTS `slow_log` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-16 15:02:29
+-- Dump completed on 2016-09-16 15:02:38

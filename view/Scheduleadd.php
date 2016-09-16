@@ -13,6 +13,9 @@ comment:
 bootstarpについているシステム
 一列を12個の箱に分割しているらしい。
 -->
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
@@ -36,7 +39,7 @@ bootstarpについているシステム
   </div>
   
   <!-- 一列目のグリッド -->
-  <form>
+  <form action="../controller_viewtest/ScheduleAddController.php" method="post">
    <div class="row">
     <div class="col-md-4 hidden-xs">
     <p>表示名：</p>
@@ -50,7 +53,12 @@ bootstarpについているシステム
 	   <br>
     <p>日にち候補</p>
      <!-- 日にち候補はDBから取得 -->
-     <p>2016/09/20 18:00
+     <p>
+     <?php
+				$schedule = $_SESSION['schedule1'];
+				echo "$schedule";
+	?>
+      <!-- 2016/09/20 18:00 -->
       <!-- nameの部分はdate + 日にち候補にする --> 
       <input type="button" name="haribote" value="　0　＝　○" />
       <input type="button" name="haribote" value="　1　＝　△" />
@@ -79,7 +87,7 @@ bootstarpについているシステム
  
    <div class="col-md-1 hidden-xs" style="position: relative;">
     <br> <br> <br> <br> <br> <br> 
-    <input type="button" name="haribote" value="イベント新規作成" />
+    <input type="submit" name="haribote" value="投稿" />
    </div>
   </div>
  </form>
