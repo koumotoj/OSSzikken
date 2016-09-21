@@ -37,12 +37,9 @@ comment:
 	//	echo "<p>エラー！</p>";
 	//} else {
 		$test = $_SESSION['url'];
-	?>
-		<textarea name="hash" cols=50 rows=5
-		value = "<?php $test ?> " />
-		<?php //echo $test; ?>
-	//}
   ?>
+		<textarea name="hash" cols=50 rows=5 value = "<?php $test ?> " />
+		<?php //echo $test; ?>
   </div> 
 <!-- <form action="../controller_viewtest/ScheduleController.php" method="post"> -->
 <!-- <form action="../controller/ScheduleController.php" method="post"> -->
