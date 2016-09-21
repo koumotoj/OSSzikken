@@ -6,13 +6,15 @@ class Schedule{
 	private $candidateSchedule;
 	private $displayName;
 	private $evaluation;
+	private $comment;
 
-	public function __construct($scheduleId, $eventUrl, $candidateSchedule, $displayName, $evaluation){
+	public function __construct($scheduleId, $eventUrl, $candidateSchedule, $displayName, $evaluation, $comment){
 		$this -> scheduleId = $scheduleId;
 		$this -> eventUrl = $eventUrl;
 		$this -> candidateSchedule = $candidateSchedule;
 		$this -> displayName = $displayName;
 		$this -> evaluation= $evaluation;
+		$this -> comment = $comment;
 	}
 		
 	public function getEventUrl(){
@@ -26,5 +28,8 @@ class Schedule{
 	}
 	public function getEvaluation(){
 		return $evaluation;
+	}
+	public function getComment(){
+		return $comment;
 	}
 }
