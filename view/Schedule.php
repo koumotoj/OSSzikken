@@ -27,8 +27,10 @@ comment:
   <h1>調整くん</h1>
  </div>
  <?php
+	
 	$event = $_SESSION['event'];
-	echo "<h1>$event</h1>";
+	$eventname = $event[1];
+	echo "<h1>$eventname</h1>";
  ?>
   <div class="p_center">
    <table border=1>
@@ -58,7 +60,8 @@ comment:
 	<tr>
 		<th>
 			<?php
-				$schedule = $_SESSION['schedule'];
+				$schedule_array = $_SESSION['schedule'];
+				$schedule = $schedule_array[2];
 				echo "$schedule";
 				$_SESSION['schedule1'] = $schedule; 
 			?>
