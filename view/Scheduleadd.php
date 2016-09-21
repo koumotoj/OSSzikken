@@ -40,11 +40,11 @@ session_start();
   
   <!-- 一列目のグリッド -->
   <!-- <form action="../controller_viewtest/ScheduleAddController.php" method="post"> -->
-  <!-- <form action="../controller_viewtest/ScheduleAddController.php" method="post"> -->
+  <form action="../controller/ScheduleAddController.php" method="post">
    <div class="row">
     <div class="col-md-4 hidden-xs">
     <p>表示名：</p>
-    <textarea name="event" cols=30 rows=1></textarea>
+    <textarea name="name" cols=30 rows=1></textarea>
    </div>
   </div>
 
@@ -61,20 +61,23 @@ session_start();
 	?>
       <!-- 2016/09/20 18:00 -->
       <!-- nameの部分はdate + 日にち候補にする --> 
-      <form action="../controller_viewtest/ScheduleAddController.php" method="post" style="display: inline">
-       <input type="hidden" name="haribote" value="0" />
-       <input type="submit" value="○" />
-      </form>
+      <!-- <form action="../controller_viewtest/ScheduleAddController.php" method="post" style="display: inline"> -->
+      <select name="eva" id="eva">
+		  <option value="0" selected="selected">○</option>
+		  <option value="1" selected="selected">△</option>
+		  <option value="2" selected="selected">×</option>
+      </select>
       
-      <form action="../controller_viewtest/ScheduleAddController.php" method="post" style="display: inline">
-       <input type="hidden" name="haribote" value="1" />
-       <input type="submit" value="△" />
-      </form>
+      <!--
+      <input type="hidden" name="eva" value="0" />
+      <input type="button" value="○" />
       
-      <form action="../controller_viewtest/ScheduleAddController.php" method="post" style="display: inline">
-       <input type="hidden" name="haribote" value="2" />
-       <input type="submit" value="×" />
-      </form>
+      <input type="hidden" name="eva" value="1" />
+      <input type="button" value="△" />
+      
+      <input type="hidden" name="eva" value="2" />
+      <input type="button" value="×" />
+      -->
      
    </div>
   
@@ -84,7 +87,7 @@ session_start();
    <div class="col-md-4 hidden-xs">
 	<br>
     <p>コメント：</p>
-    <textarea name="date" cols=30 rows=6></textarea>
+    <textarea name="com" cols=30 rows=6></textarea>
    </div>
  
    <div class="col-md-1 hidden-xs" style="position: relative;">
