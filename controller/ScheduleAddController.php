@@ -1,4 +1,5 @@
 <?php
+session_start();
 
   require_once'/var/www/html/OSSzikken/model/EventDAO.php';
   require_once'/var/www/html/OSSzikken/model/Event.php';
@@ -9,12 +10,12 @@
   $schedule_evaluation = $_POST['eva'];
   $schedule_comment = $_POST['com'];
 
-  session_start();
   $hash = $_SESSION['url'];
 
   //$hash = $_GET['hash'];
   $event = new Event();
-  $candidateschedule = $event -> getCandidateschedule();
+
+  $candidateschedule = $event -> getCandidateschedule($hash);
 
   $scheduleDao = new ScheduleDAO();
   $scheduleDao -> setSchedule($hash,$candidateschedule,$schedule_name,$schedule_evaluation);	
