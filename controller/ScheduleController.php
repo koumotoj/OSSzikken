@@ -11,9 +11,10 @@ $eventDao = new EventDAO();
 $event = $eventDao -> getEvent($hash);
 
 $scheduleDao = new ScheduleDAO();
-$schedulelist = $scheduleDao -> getSchedule($hash);
+$schedule = $scheduleDao -> getSchedule($hash);
 
-$_SESSION['event']=$scheduleArray;
+$_SESSION['event']=$event;
+$_SESSION['schedule']=$schedule;
 
 //$_POST['event'] = $event;
 //$_POST['schedule'] = $schedule;

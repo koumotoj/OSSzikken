@@ -41,8 +41,9 @@ comment:
 	//}
   ?>
   </div> 
-<form action="../controller_viewtest/ScheduleController.php" method="post">
-	  <input type="submit" name="haribote2" value="スケジュール表示" />
+<!-- <form action="../controller_viewtest/ScheduleController.php" method="post"> -->
+ <form action="../controller/ScheduleController.php" method="post">
+  <input type="submit" name="haribote2" value="スケジュール表示" />
  </form>
  <br>
 </div>		

@@ -39,6 +39,7 @@ session_start();
   </div>
   
   <!-- 一列目のグリッド -->
+  <!-- <form action="../controller_viewtest/ScheduleAddController.php" method="post"> -->
   <form action="../controller_viewtest/ScheduleAddController.php" method="post">
    <div class="row">
     <div class="col-md-4 hidden-xs">
