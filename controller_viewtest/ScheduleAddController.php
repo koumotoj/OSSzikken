@@ -4,11 +4,11 @@
   require_once'../model/ScheduleDAO.php';
 
   session_start();
-/*
-  $schedule_name = $_POST[''];
-  $schedule_evaluation = $_POST[''];
-  $schedule_comment = $_POST[''];
 
+  $schedule_name = $_POST['name'];
+  $schedule_evaluation = $_POST['eva'];
+  $schedule_comment = $_POST['com'];
+/*
   $hash = $_GET['hash'];
   $scheduleDao = new ScheduleDAO();
   $newschedule = $scheduleDao -> getschedule($hash);
@@ -18,9 +18,9 @@
   array_push($scheduleArray,$newschedule);
 */
 
-  $_SESSION['display_name'] = "あーいせんぱい";
-  $_SESSION['evaluation'] = 2;
-  $_SESSION['comment'] = "飲み会にいってる場合じゃねぇ!";
+  $_SESSION['display_name'] = $schedule_name;
+  $_SESSION['evaluation'] = $schedule_evaluation;
+  $_SESSION['comment'] = $schedule_comment;
 
   header('Location: ../view/Schedule.php');
   exit();
