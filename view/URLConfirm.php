@@ -6,6 +6,8 @@ comment:
 -->
 <?php
 	session_start();
+    $test = $_SESSION['url'];
+	$html = "../controller/ScheduleController.php?=hash=";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -26,20 +28,23 @@ comment:
  <div class="box1">
   <h1>調整くん</h1>
  </div>
- <form action="../controller/ScheduleController.php" method="get">
+<!-- <form action="../controller/ScheduleController.php" method="get"> -->
+ <form action="<?php echo $html . "+" . $test; ?>" method="get"> 
   <div class="p_center">
   ↓　あなたが開いたイベントのURL　↓
   </div>
   
   <div class="box_center">
   <?php
+  /*
 	//if( ($test = $_SESSION['test']) == null) {
 	//	echo "<p>エラー！</p>";
 	//} else {
 	$test = $_SESSION['url'];
 	$html = "../controller/ScheduleController.php?=hash=";
+  */
   ?>
-  <input type="text" name="hash" size="50" maxlength="100" value="<?php echo $html . "+" . $test; ?>">
+  <input type="text" name="hash" size="50" maxlength="100" value="<?php echo $test; ?>">
   </div> 
 <!-- <form action="../controller_viewtest/ScheduleController.php" method="post"> -->
 <!-- <form action="../controller/ScheduleController.php" method="post"> -->
