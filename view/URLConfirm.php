@@ -37,8 +37,9 @@ comment:
 	//	echo "<p>エラー！</p>";
 	//} else {
 	$test = $_SESSION['url'];
+	$html = "../controller/ScheduleController.php?=hash=";
   ?>
-  <input type="text" name="hash" size="50" maxlength="100" value="<?php echo $test; ?>">
+  <input type="text" name="hash" size="50" maxlength="100" value="<?php echo $html . "+" . $test; ?>">
   </div> 
 <!-- <form action="../controller_viewtest/ScheduleController.php" method="post"> -->
 <!-- <form action="../controller/ScheduleController.php" method="post"> -->
