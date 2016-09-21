@@ -36,16 +36,13 @@ comment:
 	//if( ($test = $_SESSION['test']) == null) {
 	//	echo "<p>エラー！</p>";
 	//} else {
-		$test = $_SESSION['url'];
+	$test = $_SESSION['url'];
   ?>
-		<textarea name="hash" cols=50 rows=5 value = "<?php $test ?>" >
-		<?php //echo $test; ?>
+  <input type="text" name="hash" size="50" maxlength="100" value="<?php echo $test; ?>">
   </div> 
 <!-- <form action="../controller_viewtest/ScheduleController.php" method="post"> -->
 <!-- <form action="../controller/ScheduleController.php" method="post"> -->
   <input type="submit" name="haribote2" value="スケジュール表示" />
- </form>
- <br>
-</div>		
+ </form>	
 </body>
 </html>
