@@ -26,7 +26,7 @@ comment:
  <div class="box1">
   <h1>調整くん</h1>
  </div>
- 
+ <form action="../controller_viewtest/ScheduleController.php" method="get">
   <div class="p_center">
   ↓　あなたが開いたイベントのURL　↓
   </div>
@@ -37,12 +37,15 @@ comment:
 	//	echo "<p>エラー！</p>";
 	//} else {
 		$test = $_SESSION['url'];
-		echo $test;
+	?>
+		<textarea name="hash" cols=50 rows=5
+		value = "<?php $test ?> " />
+		<?php //echo $test; ?>
 	//}
   ?>
   </div> 
 <!-- <form action="../controller_viewtest/ScheduleController.php" method="post"> -->
- <form action="../controller/ScheduleController.php" method="post">
+<!-- <form action="../controller/ScheduleController.php" method="post"> -->
   <input type="submit" name="haribote2" value="スケジュール表示" />
  </form>
  <br>

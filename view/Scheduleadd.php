@@ -40,7 +40,7 @@ session_start();
   
   <!-- 一列目のグリッド -->
   <!-- <form action="../controller_viewtest/ScheduleAddController.php" method="post"> -->
-  <form action="../controller_viewtest/ScheduleAddController.php" method="post">
+  <!-- <form action="../controller_viewtest/ScheduleAddController.php" method="post"> -->
    <div class="row">
     <div class="col-md-4 hidden-xs">
     <p>表示名：</p>
@@ -54,27 +54,28 @@ session_start();
 	   <br>
     <p>日にち候補</p>
      <!-- 日にち候補はDBから取得 -->
-     <p>
+     
      <?php
 				$schedule = $_SESSION['schedule1'];
 				echo "$schedule";
 	?>
       <!-- 2016/09/20 18:00 -->
       <!-- nameの部分はdate + 日にち候補にする --> 
-      <input type="button" name="haribote" value="　0　＝　○" />
-      <input type="button" name="haribote" value="　1　＝　△" />
-      <input type="button" name="haribote" value="　2　＝　×" />
-     </p>
-     <p>2016/09/21 21:00
-      <input type="button" name="haribote" value="　0　＝　○" />
-      <input type="button" name="haribote" value="　1　＝　△" />
-      <input type="button" name="haribote" value="　2　＝　×" />
-     </p>
-     <p>2016/09/22 17:00
-      <input type="button" name="haribote" value="　0　＝　○" />
-      <input type="button" name="haribote" value="　1　＝　△" />
-      <input type="button" name="haribote" value="　2　＝　×" />
-     </p>
+      <form action="../controller_viewtest/ScheduleAddController.php" method="post" style="display: inline">
+       <input type="hidden" name="haribote" value="0" />
+       <input type="submit" value="○" />
+      </form>
+      
+      <form action="../controller_viewtest/ScheduleAddController.php" method="post" style="display: inline">
+       <input type="hidden" name="haribote" value="1" />
+       <input type="submit" value="△" />
+      </form>
+      
+      <form action="../controller_viewtest/ScheduleAddController.php" method="post" style="display: inline">
+       <input type="hidden" name="haribote" value="2" />
+       <input type="submit" value="×" />
+      </form>
+     
    </div>
   
   </div>
@@ -91,7 +92,7 @@ session_start();
     <input type="submit" name="haribote" value="投稿" />
    </div>
   </div>
- </form>
+<!-- </form> -->
  <br>
 </div>		
 </body>
