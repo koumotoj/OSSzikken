@@ -40,7 +40,7 @@ bootstarpについているシステム
    <div class="row">
     <div class="col-md-4 hidden-xs">
     <p>イベント名：</p>
-    <textarea name="event_name" cols=30 rows=1></textarea>
+    <input id="event_name" maxlength="100" name="event_name" value="" type="text" />
    </div>
 
    <div class="col-md-1 hidden-xs">
